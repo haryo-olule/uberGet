@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Film Fanatics - Explore Movies and Entertainment"
+    />
+    <title>Film Fanatics</title>
+    <link rel="stylesheet" href="css/about.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav id="myNav">
+        <!-- LOGO -->
+        <div class="logo">
+          <img src="img/LOGO/LOGO.png" alt="UberGet logo" />
+          <a href="/">UberGet</a>
+        </div>
+
+        <!-- NAVIGATION LINKS -->
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- USER + CART BUTTONS -->
+        <div class="btn">
+          <i
+            class="fa-solid fa-cart-shopping"
+            onclick="window.location.href='cart.html'"
+          ></i>
+          <span id="cart-count">0</span>
+          <i class="fa-solid fa-user"
+          onclick="window.location.href='contact.html'"></i>
+        </div>
+
+        <!-- HAMBURGER MENU (Mobile Only) -->
+        <div class="btn-menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+
+    <section id="home-section" class="home-section">
+      
+      <div class="home-row">
+        <div class="home-col">
+          <h1>Welcome to UberGet!</h1>
+          <p>
+            UberGet is a virtual online shopping platform that connects customers
+            with local businesses. Our mission is to help people find and purchase
+            products at their fingertips, making it easy and convenient for everyone.
+            Whether you are looking for fashion, electronics, home essentials, or more,
+            UberGet brings a seamless shopping experience directly to your device.
+          </p>
+
+          <h1>Our Mission</h1>
+          <p>
+            At UberGet, we believe in empowering local businesses by giving them a digital
+            platform to showcase their products. Our goal is to bridge the gap between customers
+            and merchants, ensuring that quality products are accessible with just a few clicks.
+            With our user-friendly interface and secure payment options, shopping has never been
+            easier or more reliable. Join us today and explore a world of convenience at your
+            fingertips.
+          </p>
+        </div>
+        <div class="home-col">
+          <img
+            src="img/pexels-karolina-grabowska-5632398.jpg"
+            alt="Wireless Headphones"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="service">
+      <h1>WHY CHOOSE US</h1>
+      <div class="service-row">
+        <div class="service-col">
+          <i class="fa-solid fa-truck"></i>
+          <h2>Free Shipping</h2>
+          <p>
+            Enjoy free shipping on all orders with no minimum purchase required.
+          </p>
+        </div>
+
+        <div class="service-col">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          <h2>24/7 Support</h2>
+          <p>Our customer support team is available 24/7 to assist you.</p>
+        </div>
+
+        <div class="service-col">
+          <i class="fa-solid fa-tags"></i>
+          <h2>Exclusive Discounts</h2>
+          <p>Get access to exclusive discounts and special offers.</p>
+        </div>
+
+        <div class="service-col">
+          <i class="fa-solid fa-money-bill-trend-up"></i>
+          <h2>Money-Back Guarantee</h2>
+          <p>We offer a hassle-free money-back guarantee on all purchases.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">our services</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#">affiliate program</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">shipping</a></li>
+              <li><a href="#">returns</a></li>
+              <li><a href="#">order status</a></li>
+              <li><a href="#">payment options</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>online shop</h4>
+            <ul>
+              <li><a href="#">watch</a></li>
+              <li><a href="#">bag</a></li>
+              <li><a href="#">shoes</a></li>
+              <li><a href="#">dress</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/js.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,752 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --primary-color: #ff6600; /* Vibrant orange accent color */
+  --secondary-bg-color: #f5f5f5; /* Light gray for secondary sections */
+  --font-family: "Poppins", sans-serif;
+  --transition-duration: 0.3s;
+  --border-color: #e2e2e2; /* Add a border color if it's missing */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* For box-shadows */
+  --section-padding: 1rem 4%; /* Consistent padding for all sections */
+}
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none; /* For accessibility, custom focus styles below */
+  scroll-behavior: smooth;
+  font-family: var(--font-family);
+  transition: color var(--transition-duration);
+}
+
+*::selection {
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Custom Focus Styles for Accessibility */
+a:focus,
+button:focus {
+  outline: 2px dashed var(--primary-color);
+  outline-offset: 4px;
+}
+
+/* Section */
+section {
+  padding: 1rem 4%;
+  width: 100%;
+}
+
+/* Anchor Tags */
+a {
+  text-align: center;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+li {
+  list-style: none;
+}
+
+/* HEADER & NAVBAR */
+header {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  padding: 1rem 4%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+/* NAV LINKS */
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin-left: -8rem;
+}
+
+.navbar li {
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: black;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--primary-color);
+}
+
+/* USER + CART BUTTONS */
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 2rem;
+  position: relative;
+}
+
+.btn i {
+  cursor: pointer;
+  color: black;
+}
+
+.btn i:hover {
+  color: var(--primary-color);
+}
+
+.btn span {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.9rem;
+  width: 2rem;
+  height: 2rem;
+  top: 1rem;
+  left: 0.3rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  white-space: nowrap;
+}
+
+.btn-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.btn-menu i {
+  font-size: 2.4rem;
+  color: var(--text-color);
+}
+
+
+/*-------------------------------------------
+  Header & Navigation
+-------------------------------------------*/
+header {
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  position: fixed;
+  padding: 1rem 4%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+}
+
+.logo a {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+/* Navigation Links */
+.navbar {
+  display: flex;
+  gap: 2rem;
+  margin-left: -8rem; /* Adjust if needed */
+}
+
+.navbar a {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  transition: color var(--transition-duration);
+}
+
+.navbar a:hover {
+  color: var(--primary-color);
+}
+
+/* User & Cart Buttons */
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 2rem;
+  position: relative;
+}
+
+.btn i {
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.btn i:hover {
+  color: var(--primary-color);
+}
+
+.btn span {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1.9rem;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 1rem;
+  left: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  white-space: nowrap;
+}
+
+/* Mobile Menu Button */
+.btn-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.btn-menu i {
+  font-size: 2.4rem;
+  color: var(--text-color);
+}
+
+/*-------------------------------------------
+  Footer
+-------------------------------------------*/
+.footer {
+  margin-top: 2rem;
+  padding: 1rem 4%;
+  background-color: var(--bg-color);
+  border-top: 1px solid var(--border-color);
+}
+
+.footer-col {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: var(--text-color);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-col h4 {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  margin-bottom: 3.5rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+  width: 5rem;
+  height: 0.2rem;
+  background-color: var(--primary-color);
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.footer-col ul li a {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  color: var(--text-color);
+  font-weight: 300;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: var(--primary-color);
+  padding-left: 0.8rem;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 4rem;
+  width: 4rem;
+  background-color: var(--text-color);
+  margin: 0 1rem 1rem 0;
+  text-align: center;
+  line-height: 4rem;
+  font-size: larger;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/*-------------------------------------------
+  Collections & Product Grid
+-------------------------------------------*/
+.collection {
+  margin-top: 8rem; /* Space for fixed header */
+  width: 100%;
+  padding: var(--section-padding);
+}
+.collection-row {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
+.col-filter {
+  flex: 0 0 11.4%;
+  border-radius: 1rem;
+}
+.col-item {
+  flex: 1;
+  width: 80%;
+}
+
+
+/* Product Grid Info */
+.col-info {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+/* Note: The following group now only applies to elements that exist in your HTML */
+.col-info h1,
+.col-filter h1 {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+/* Dropdown Styling */
+#sort-by {
+  color: var(--text-color);
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Filter Items */
+.col-filter__item {
+  width: 100%;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.8rem;
+  background-color: var(--bg-color);
+}
+
+.col-filter__item h2 {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.col-filter__item label {
+  display: block;
+  cursor: pointer;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Product Grid */
+.col-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+  gap: 2rem;
+  background-color: var(--secondary-bg-color);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 100%;
+}
+
+
+/* Product Card */
+.headphone-col {
+  position: relative;
+  width: 100%;
+  height: 37rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-bottom: 3px solid transparent;
+}
+
+.headphone-col:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.headphone-col img {
+  width: 15rem;
+  height: 15rem;
+  object-fit: contain;
+  text-align: center;
+}
+
+.headphone-col h1 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin: 1rem 0;
+}
+
+.headphone-col p {
+  font-size: 1.5rem;
+}
+
+/* Rating */
+.rating i {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin: 0 0.1rem;
+}
+
+/* ADD TO CART BUTTON */
+.add-to-cart-btn { 
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  background-color: var(--text-color);
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 1rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  background-color: var(--primary-color);
+}
+
+/* LIKE BUTTON */
+.like-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #ccc;
+  transition: color 0.3s ease;
+  z-index: 10;
+}
+
+.like-button:hover {
+  color: var(--primary-color);
+}
+
+/*-------------------------------------------
+  Responsive Styles
+-------------------------------------------*/
+
+@media (max-width: 992px) {
+  html {
+    font-size: 58%;
+  }
+
+  /* Navbar adjustments */
+  .navbar {
+    flex-direction: column;
+    position: absolute;
+    top: -700%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 88%;
+    background: var(--bg-color);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    transition: top 0.7s ease-in-out;
+    margin-left: 0rem;
+  }
+
+  .navbar.show {
+    top: 6rem;
+  }
+  
+  .navbar a {
+    font-size: 2rem;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-menu {
+    display: block;
+  }
+
+  .logo {
+    justify-content: flex-start;
+  }
+
+  .logo img {
+    display: none;
+  }
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .footer-col {
+    width: 50%;
+    margin-bottom: 3rem;
+  }
+
+  .footer-col h4 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+}
+
+
+ 
+/* Large Mobile Devices */
+@media (max-width: 768px) {
+  html {
+    font-size: 56%;
+  }
+
+  header {
+    padding: 1.5rem 3%;
+  }
+
+  .navbar.show {
+    padding: 2rem 1rem;
+  }
+
+  .navbar a {
+    font-size: 1.8rem;
+  }
+  .logo img {
+    display: none;
+  }
+
+  .navbar a {
+    font-size: 2rem;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .btn i {
+    font-size: 2rem;
+  }
+  
+  .btn span {
+    font-size: 2rem;
+    padding: 0.1rem 0.5rem;
+  }
+  
+  /* Collection Adjustments */
+  .collection {
+    margin-top: 7rem;
+    padding: var(--section-padding);
+  }
+  
+  .collection-row {
+    flex-direction: column;
+  }
+  
+  .col-filter {
+    width: 100%;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  
+  .col-item {
+    width: 100%;
+  }
+  
+  .col-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .col-row {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    padding: 1.5rem;
+  }
+  
+  .headphone-col {
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+  }
+  
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .footer-col {
+    width: 50%;
+    margin-bottom: 3rem;
+  }
+
+  .footer-col h4 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  html {
+    font-size: 55%;
+  }
+
+  header, section, .footer {
+    padding: 1rem 4%;
+  }
+
+  .col-filter__item {
+    padding: 1rem;
+    
+  }
+  .col-filter__item label{
+    font-size: 1.4rem;
+    font-weight: bolder;
+  }
+  
+  .col-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .headphone-col {
+    height: auto;
+    padding: 1.5rem;
+  }
+  
+  .headphone-col img {
+    width: 12rem;
+    height: 12rem;
+  }
+  
+  .footer-col {
+    width: 100%;
+  }
+  
+  .footer-col .social-links a {
+    height: 3.5rem;
+    width: 3.5rem;
+    line-height: 3.5rem;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 360px) {
+  html {
+    font-size: 50%;
+  }
+  
+  header, section, .footer {
+    padding: 1rem 3%;
+  }
+  
+  .btn span {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .headphone-col p {
+    font-size: 1.3rem;
+  }
+  
+ 
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .navbar {
+    top: -800%;
+  }
+  
+  .navbar.show {
+    top: 7rem;
+  }
+}

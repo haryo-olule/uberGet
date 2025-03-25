@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="UberGet - Shopping Cart" />
+    <title>UberGet - Shopping Cart</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav id="myNav">
+        <!-- LOGO -->
+        <div class="logo">
+          <img src="img/LOGO/LOGO.png" alt="UberGet logo" />
+          <a href="/">UberGet</a>
+        </div>
+
+        <!-- NAVIGATION LINKS -->
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- USER + CART BUTTONS -->
+        <div class="btn">
+          <i
+            class="fa-solid fa-cart-shopping"
+            onclick="window.location.href='cart.html'"
+          ></i>
+          <span id="cart-count">0</span>
+          <i class="fa-solid fa-user"
+          onclick="window.location.href='contact.html'"></i>
+        </div>
+
+        <!-- HAMBURGER MENU (Mobile Only) -->
+        <div class="btn-menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+    <!-- Cart Section -->
+    <!-- Cart Section -->
+    <section class="cart-section">
+      <h1>Your Shopping Cart</h1>
+
+      <div class="cart-container">
+        <div class="cart-items">
+        
+        </div>
+
+        <div class="cart-summary">
+          <h2>Order Summary</h2>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span>Free</span>
+          </div>
+          <div class="promo-code">
+            <input
+              type="text"
+              id="promo-input"
+              placeholder="Enter promo code"
+            />
+            <button id="apply-promo">Apply</button>
+          </div>
+          <div class="summary-row promo-discount" style="display: none">
+            <span>Discount</span>
+            <span id="discount-amount">-$0.00</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span id="cart-total">$0.00</span>
+          </div>
+          <button id="checkout-btn">Proceed to Checkout</button>
+          <button id="continue-shopping">Continue Shopping</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">our services</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#">affiliate program</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">shipping</a></li>
+              <li><a href="#">returns</a></li>
+              <li><a href="#">order status</a></li>
+              <li><a href="#">payment options</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>online shop</h4>
+            <ul>
+              <li><a href="#">watch</a></li>
+              <li><a href="#">bag</a></li>
+              <li><a href="#">shoes</a></li>
+              <li><a href="#">dress</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/js.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

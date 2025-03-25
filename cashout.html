@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Film Fanatics - Explore Movies and Entertainment"
+    />
+    <title>Film Fanatics</title>
+    <link rel="stylesheet" href="css/cashout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav id="myNav">
+        <!-- LOGO -->
+        <div class="logo">
+          <img src="img/LOGO/LOGO.png" alt="UberGet logo" />
+          <a href="/">UberGet</a>
+        </div>
+
+        <!-- NAVIGATION LINKS -->
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- USER + CART BUTTONS -->
+        <div class="btn">
+          <i
+            class="fa-solid fa-cart-shopping"
+            onclick="window.location.href='cart.html'"
+          ></i>
+          <span id="cart-count">0</span>
+          <i class="fa-solid fa-user"
+          onclick="window.location.href='contact.html'"></i>
+        </div>
+
+        <!-- HAMBURGER MENU (Mobile Only) -->
+        <div class="btn-menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Container -->
+    <section class="container">
+      <h1>Checkout</h1>
+      <div class="billing-container">
+        <!-- Billing Form & Payment Section -->
+        <div class="billing-form">
+          <h2>Billing Details</h2>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Enter your phone number"
+            />
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" placeholder="Enter your address" />
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" id="city" placeholder="Enter your city" />
+            </div>
+            <div class="form-group">
+              <label for="state">State</label>
+              <input type="text" id="state" placeholder="Enter your state" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="zip">Postal Code</label>
+              <input
+                type="text"
+                id="zip"
+                placeholder="Enter your postal code"
+              />
+            </div>
+            <div class="form-group">
+              <label for="country">Country</label>
+              <select id="country">
+                <option value="">Select Country</option>
+                <option value="USA">United States</option>
+                <option value="Canada">Canada</option>
+                <option value="UK">United Kingdom</option>
+                <option value="Australia">Australia</option>
+              </select>
+            </div>
+          </div>
+          <h2>Payment Method</h2>
+          <div class="payment-methods">
+            <div class="payment-method active" data-method="card">
+              <div class="payment-method-icon">💳</div>
+              <div>Credit Card</div>
+            </div>
+            <div class="payment-method" data-method="paypal">
+              <div class="payment-method-icon">🅿️</div>
+              <div>PayPal</div>
+            </div>
+            <div class="payment-method" data-method="cashout">
+              <div class="payment-method-icon">💰</div>
+              <div>Cashout</div>
+            </div>
+          </div>
+          <!-- Card Details -->
+          <div class="card-details" id="card-payment">
+            <div class="card-icons">
+              <div class="card-icon">VISA</div>
+              <div class="card-icon">MC</div>
+              <div class="card-icon">AMEX</div>
+              <div class="card-icon">DISC</div>
+            </div>
+            <div class="form-group">
+              <label for="card-number">Card Number</label>
+              <input
+                type="text"
+                id="card-number"
+                placeholder="0000 0000 0000 0000"
+              />
+            </div>
+            <div class="row">
+              <div class="form-group">
+                <label for="expiry">Expiry Date</label>
+                <input type="text" id="expiry" placeholder="MM/YY" />
+              </div>
+              <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="123" />
+              </div>
+            </div>
+          </div>
+
+          <div class="paypal-details" id="paypal-payment" style="display: none">
+            <div class="form-group">
+              <label for="paypal-email">PayPal Email</label>
+              <input
+                type="email"
+                id="paypal-email"
+                placeholder="Enter your PayPal email address"
+              />
+            </div>
+            <div class="form-group">
+              <label for="paypal-phone">Phone Number (Optional)</label>
+              <input
+                type="tel"
+                id="paypal-phone"
+                placeholder="Enter your phone number"
+              />
+            </div>
+            <div class="paypal-info">
+              <p>
+                💡 You will be redirected to PayPal to complete your payment
+                securely.
+              </p>
+              <div class="paypal-logos">
+                <!-- PayPal Icon -->
+                <i class="fab fa-paypal" aria-hidden="true"></i>
+                <span class="visually-hidden">PayPal</span>
+
+                <!-- Secured Payment Icon -->
+                <i class="fas fa-lock" aria-hidden="true"></i>
+                <span class="visually-hidden">Secured Payment</span>
+              </div>
+            </div>
+          </div>
+          <!-- Cashout Section -->
+          <div class="cashout-section" id="cashout-payment">
+            <h3>Cashout Options</h3>
+            <p>Select your preferred cashout method:</p>
+            <div class="cashout-options">
+              <div class="cashout-option active" data-cashout="bank">
+                <div>Bank Transfer</div>
+              </div>
+              <div class="cashout-option" data-cashout="crypto">
+                <div>Cryptocurrency</div>
+              </div>
+              <div class="cashout-option" data-cashout="gift">
+                <div>Gift Card</div>
+              </div>
+            </div>
+            <div class="cashout-details" id="bank-cashout">
+              <div class="form-group">
+                <label for="bank-name">Bank Name</label>
+                <input
+                  type="text"
+                  id="bank-name"
+                  placeholder="Enter your bank name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="account-number">Account Number</label>
+                <input
+                  type="text"
+                  id="account-number"
+                  placeholder="Enter your account number"
+                />
+              </div>
+              <div class="form-group">
+                <label for="routing-number">Routing Number</label>
+                <input
+                  type="text"
+                  id="routing-number"
+                  placeholder="Enter your routing number"
+                />
+              </div>
+            </div>
+            <div
+              class="cashout-details"
+              id="crypto-cashout"
+              style="display: none"
+            >
+              <div class="form-group">
+                <label for="crypto-address">Wallet Address</label>
+                <input
+                  type="text"
+                  id="crypto-address"
+                  placeholder="Enter your wallet address"
+                />
+              </div>
+              <div class="form-group">
+                <label for="crypto-currency">Cryptocurrency</label>
+                <select id="crypto-currency">
+                  <option value="BTC">Bitcoin (BTC)</option>
+                  <option value="ETH">Ethereum (ETH)</option>
+                  <option value="USDT">Tether (USDT)</option>
+                </select>
+              </div>
+            </div>
+            <div
+              class="cashout-details"
+              id="gift-cashout"
+              style="display: none"
+            >
+              <div class="form-group">
+                <label for="gift-email">Email for Gift Card</label>
+                <input
+                  type="email"
+                  id="gift-email"
+                  placeholder="Enter email for gift card delivery"
+                />
+              </div>
+              <div class="form-group">
+                <label for="gift-type">Gift Card Type</label>
+                <select id="gift-type">
+                  <option value="amazon">Amazon</option>
+                  <option value="apple">Apple</option>
+                  <option value="walmart">Walmart</option>
+                  <option value="target">Target</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- New Order Summary Section -->
+        <div class="order-summary">
+          <h2>Order Summary</h2>
+          <div class="cart-summary">
+            <div class="summary-row">
+              <span>Product Name</span>
+              <span id="product-name-display">None</span>
+            </div>
+            <div class="summary-row">
+              <span>Quantity</span>
+              <span id="product-quantity">1</span>
+            </div>
+            <div class="summary-row promo-discount" style="display: none">
+              <span>Discount</span>
+              <span id="discount-amount">-$0.00</span>
+            </div>
+            <div class="summary-row total">
+              <span>Total</span>
+              <span id="product-price-display">$0.00</span>
+            </div>
+            <button id="checkout-btn">Checkout</button>
+            <button id="continue-shopping">Continue Shopping</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">our services</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#">affiliate program</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">shipping</a></li>
+              <li><a href="#">returns</a></li>
+              <li><a href="#">order status</a></li>
+              <li><a href="#">payment options</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>online shop</h4>
+            <ul>
+              <li><a href="#">watch</a></li>
+              <li><a href="#">bag</a></li>
+              <li><a href="#">shoes</a></li>
+              <li><a href="#">dress</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/cashout.js" defer></script>
+  </body>
+</html>

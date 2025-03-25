@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Film Fanatics - Explore Movies and Entertainment"
+    />
+    <title>Film Fanatics</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav id="myNav">
+        <!-- LOGO -->
+        <div class="logo">
+          <img src="img/LOGO/LOGO.png" alt="UberGet logo" />
+          <a href="/">UberGet</a>
+        </div>
+
+        <!-- NAVIGATION LINKS -->
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- USER + CART BUTTONS -->
+        <div class="btn">
+          <i
+            class="fa-solid fa-cart-shopping"
+            onclick="window.location.href='cart.html'"
+          ></i>
+          <span id="cart-count">0</span>
+          <i class="fa-solid fa-user"
+          onclick="window.location.href='contact.html'"></i>
+        </div>
+
+        <!-- HAMBURGER MENU (Mobile Only) -->
+        <div class="btn-menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+    <section class="popout-section" id="pop2">
+      <div class="pop-info">
+        <div class="pop-row">
+          <div class="pop-col">
+            <img
+            src="img/BOOKS/Crime and Punishment.jpeg"
+            alt="Crime and Punishment Book Cover"
+          />
+            <div class="pol1">
+              
+            </div>
+          </div>
+          <div class="pop-col">
+            <div class="pop-col1">
+              <button class="close-popout">&times;</button>
+              <h2>Crime and Punishment by Fyodor Dostoevsky</h2>
+
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+
+              <h3 class="price">$50.00</h3>
+
+              <p>
+                Fyodor Dostoevsky’s seminal novel, “Crime and Punishment,”
+                explores the psychological turmoil of Rodion Raskolnikov, a
+                desperate ex-student who commits a shocking crime. First
+                published in 1866, the story delves into themes of morality,
+                guilt, and redemption as it follows Raskolnikov’s emotional
+                struggle and eventual reckoning with his conscience.
+              </p>
+
+              <div class="colors">
+                <h2>Choose a Color</h2>
+                <a href="#">White</a>
+                <a href="#">Black</a>
+              </div>
+
+              <div class="quantity">
+                <h2>Quantity</h2>
+                <button id="decrement">-</button>
+                <span>0</span>
+                <button id="increment">+</button>
+              </div>
+              <div class="btn-actions">
+                <a href="cashout.html">Buy Now</a>
+              </div>
+
+              <p>Free Delivery Over Orders Over $300.00</p>
+            </div>
+          </div>
+        </div>
+
+        <section class="tabs">
+          <div class="tab-list">
+            <button class="tab-button active" data-tab="description">
+              Description
+            </button>
+            <button class="tab-button" data-tab="information">
+              Additional Information
+            </button>
+            <button class="tab-button" data-tab="reviews">Reviews</button>
+          </div>
+
+          <div class="tab-content active" id="description">
+            <h2>Product Description</h2>
+            <p>
+              “Crime and Punishment” is regarded as one of Dostoevsky’s finest
+              works, providing a profound and unsettling portrait of inner
+              conflict. This edition gives readers a chance to experience the
+              moral and existential questions that arise as Raskolnikov battles
+              with remorse, pride, and the hope of spiritual transformation.
+            </p>
+          </div>
+
+          <div class="tab-content" id="information">
+            <h2>Additional Information</h2>
+            <ul class="features-list">
+              <li>
+                <strong>Gripping Narrative:</strong> A deep dive into the psyche
+                of a criminal mind, revealing Dostoevsky’s masterful portrayal
+                of human nature.
+              </li>
+              <li>
+                <strong>Archival Quality Paper:</strong> Bound with premium
+                pages designed for durability and reading comfort.
+              </li>
+              <li>
+                <strong>Hardcover or Paperback:</strong> Choose the format that
+                best suits your library or reading preference.
+              </li>
+              <li>
+                <strong>Translator’s Notes:</strong> Detailed annotations offer
+                historical and cultural context for a richer understanding.
+              </li>
+              <li>
+                <strong>Multiple Edition Options:</strong> Select standard or
+                deluxe editions to complete your Dostoevsky collection.
+              </li>
+              <li>
+                <strong>A Timeless Classic:</strong> Ideal for enthusiasts of
+                classic literature, philosophical novels, and psychological
+                drama.
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-content" id="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review">
+              <p><strong>John D.</strong> ★★★★★ - "Great quality product!"</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="headphone">
+          <h1 class="info">Related Product</h1>
+          <div class="headphone-row">
+            <!-- Product 1 -->
+            <div
+              class="headphone-col"
+              data-category="book"
+              onclick="window.location.href='The Idiot.html'"
+            >
+            <img src="img/BOOKS/The Idiot.jpeg" alt="The Idiot" />
+              <h1>The Idiot</h1>
+              <h2>$45.00</h2>
+              <p>10 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <button class="add-to-cart-btn" onclick="event.stopPropagation();">
+                Add to Cart
+              </button>
+            </div>
+
+            <!-- Product 2 -->
+            <div
+              class="headphone-col"
+              data-category="book"
+              onclick="window.location.href='Crime.html'"
+            >
+              <img
+                src="img/BOOKS/Crime and Punishment.jpeg"
+                alt="Crime and Punishment Book Cover"
+              />
+              <h1>Crime and Punishment</h1>
+              <h2>$50.00</h2>
+              <p>8 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <button class="add-to-cart-btn" onclick="event.stopPropagation();">
+                Add to Cart
+              </button>
+            </div>
+
+            <!-- Product 3 -->
+            <div
+              class="headphone-col"
+              data-category="book"
+              onclick="window.location.href='brother.html'"
+            >
+              <img
+                src="img/BOOKS/he Brothers Karamazov Bo.jpeg"
+                alt="The Brothers Karamazov Book Cover"
+              />
+              <h1>The Brothers Karamazov</h1>
+              <h2>$68.00</h2>
+              <p>6 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <button class="add-to-cart-btn" onclick="event.stopPropagation();">
+                Add to Cart
+              </button>
+            </div>
+
+            <!-- Product 4 -->
+            <div
+              class="headphone-col"
+              data-category="book"
+              onclick="window.location.href='underground.html'"
+            >
+              <img
+                src="img/BOOKS/Notes from Underground Bo.jpeg"
+                alt="Notes from Underground Book Cover"
+              />
+              <h1>Notes from Underground</h1>
+              <h2>$40.00</h2>
+              <p>7 in stock</p>
+              <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <button class="add-to-cart-btn" onclick="event.stopPropagation();">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">our services</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#">affiliate program</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">shipping</a></li>
+              <li><a href="#">returns</a></li>
+              <li><a href="#">order status</a></li>
+              <li><a href="#">payment options</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>online shop</h4>
+            <ul>
+              <li><a href="#">watch</a></li>
+              <li><a href="#">bag</a></li>
+              <li><a href="#">shoes</a></li>
+              <li><a href="#">dress</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/js.js" defer></script>
+  </body>
+</html>
