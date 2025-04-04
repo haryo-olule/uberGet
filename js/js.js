@@ -38,22 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ================================
-  // 3. LIKE BUTTON FUNCTIONALITY
-  // ================================
-  const likeButtons = document.querySelectorAll(".like-button");
-  if (likeButtons.length) {
-    likeButtons.forEach((button) => {
-      button.addEventListener("click", (event) => {
-        event.stopPropagation();
-        const icon = button.querySelector("i");
-        icon.classList.toggle("fa-solid");
-        icon.classList.toggle("far");
-      });
-    });
-  }
-
-  // ================================
-  // 4. CART FUNCTIONALITY
+  // 4. CART FUNCTIONALITY (UPDATED)
   // ================================
   function getCart() {
     return JSON.parse(localStorage.getItem("cart")) || [];
@@ -64,6 +49,58 @@ document.addEventListener("DOMContentLoaded", function () {
     const count = cart.reduce((total, item) => total + item.quantity, 0);
     const display = document.getElementById("cart-count");
     if (display) display.textContent = count;
+  }
+
+  function showPopup(message) {
+    // Create popup elements
+    const popup = document.createElement("div");
+    popup.className = "cart-popup";
+
+    // Add item icon
+    const icon = document.createElement("i");
+    icon.className = "fas fa-check-circle";
+    popup.appendChild(icon);
+
+    // Add message
+    const text = document.createElement("span");
+    text.textContent = message;
+    popup.appendChild(text);
+
+    // Add styles
+    popup.style.position = "fixed";
+    popup.style.top = "50px"; // Changed from bottom to top
+    popup.style.left = "10%"; // Position to center with 80% width
+    popup.style.width = "80%"; // Set width to 80%
+    popup.style.backgroundColor = " #ff6600";
+    popup.style.color = "white";
+    popup.style.padding = "12px 20px";
+    popup.style.borderRadius = "4px";
+    popup.style.boxShadow = "0 2px 5px rgba(0,0,0,0.2)";
+    popup.style.display = "flex";
+    popup.style.alignItems = "center";
+    popup.style.justifyContent = "center"; // Center content horizontally
+    popup.style.gap = "8px";
+    popup.style.zIndex = "1000";
+    popup.style.opacity = "0";
+    popup.style.transition = "opacity 0.3s ease-in-out";
+    popup.style.fontSize = "1.3rem"; // Larger font size
+    popup.style.textAlign = "center"; // Center text
+
+    // Add to document
+    document.body.appendChild(popup);
+
+    // Show popup with animation
+    setTimeout(() => {
+      popup.style.opacity = "1";
+    }, 10);
+
+    // Remove popup after 3 seconds
+    setTimeout(() => {
+      popup.style.opacity = "0";
+      setTimeout(() => {
+        document.body.removeChild(popup);
+      }, 300);
+    }, 3000);
   }
 
   function addToCart(productId, productName, price, imageSrc) {
@@ -82,7 +119,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     localStorage.setItem("cart", JSON.stringify(cart));
     updateCartCount();
-    alert(productName + " added to your cart!");
+    // Replace alert with custom popup
+    showPopup(productName + " added to your cart!");
   }
 
   document.querySelectorAll(".add-to-cart-btn").forEach((button) => {
@@ -279,5 +317,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
-

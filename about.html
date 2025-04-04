@@ -7,13 +7,14 @@
       name="description"
       content="Film Fanatics - Explore Movies and Entertainment"
     />
-    <title>Film Fanatics</title>
+    <title>UberGet About</title>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/about.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
@@ -23,44 +24,47 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
-    <!-- Header -->
+    <!-- Header Section -->
     <header>
       <nav id="myNav">
-        <!-- LOGO -->
+        <!-- Logo -->
         <div class="logo">
           <img src="img/LOGO/LOGO.png" alt="UberGet logo" />
-          <a href="/">UberGet</a>
+          <a href="index.html">UberGet</a>
         </div>
 
-        <!-- NAVIGATION LINKS -->
+        <!-- Navigation Links -->
         <ul class="navbar">
           <li><a href="index.html">Home</a></li>
           <li><a href="collection.html">Collection</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="about.html" class="active">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <!-- USER + CART BUTTONS -->
+        <!-- Cart and User Icons -->
         <div class="btn">
           <i
             class="fa-solid fa-cart-shopping"
             onclick="window.location.href='cart.html'"
           ></i>
           <span id="cart-count">0</span>
-          <i class="fa-solid fa-user"
-          onclick="window.location.href='contact.html'"></i>
+          <i
+            class="fa-solid fa-user"
+            onclick="window.location.href='contact.html'"
+          ></i>
         </div>
 
-        <!-- HAMBURGER MENU (Mobile Only) -->
+        <!-- Mobile Menu Icon -->
         <div class="btn-menu">
           <i class="fa-solid fa-bars"></i>
         </div>
       </nav>
     </header>
 
+    <!-- About Section -->
     <section id="home-section" class="home-section">
-      
       <div class="home-row">
         <div class="home-col">
           <h1>Welcome to UberGet!</h1>
@@ -91,29 +95,25 @@
       </div>
     </section>
 
+    <!-- Why Choose Us Section -->
     <section class="service">
       <h1>WHY CHOOSE US</h1>
       <div class="service-row">
         <div class="service-col">
           <i class="fa-solid fa-truck"></i>
           <h2>Free Shipping</h2>
-          <p>
-            Enjoy free shipping on all orders with no minimum purchase required.
-          </p>
+          <p>Enjoy free shipping on all orders with no minimum purchase required.</p>
         </div>
-
         <div class="service-col">
           <i class="fa-solid fa-clock-rotate-left"></i>
           <h2>24/7 Support</h2>
           <p>Our customer support team is available 24/7 to assist you.</p>
         </div>
-
         <div class="service-col">
           <i class="fa-solid fa-tags"></i>
           <h2>Exclusive Discounts</h2>
           <p>Get access to exclusive discounts and special offers.</p>
         </div>
-
         <div class="service-col">
           <i class="fa-solid fa-money-bill-trend-up"></i>
           <h2>Money-Back Guarantee</h2>
@@ -122,6 +122,7 @@
       </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
       <div class="container">
         <div class="row">
@@ -165,6 +166,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- JavaScript -->
     <script src="js/js.js" defer></script>
   </body>
 </html>

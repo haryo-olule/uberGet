@@ -464,11 +464,12 @@ nav {
 
   .logo img {
     height: 3rem;
+    display: none;
   }
 
   .logo a {
     font-size: 2rem;
-    display: none;
+    
   }
 
   .btn img {

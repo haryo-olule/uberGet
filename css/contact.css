@@ -557,11 +557,11 @@ button.ghost:hover {
   }
   
   .btn i {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
   
   .btn span {
-    font-size: 2rem;
+    font-size: 2.3rem;
     padding: 0.1rem 0.5rem;
   }
 
@@ -634,18 +634,10 @@ button.ghost:hover {
     font-size: 50%;
   }
 
-  header,
-  nav {
-    padding: 1rem 1%;
-  }
-
-  .logo img {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
+  
 
   .logo a {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 
   /* Changed container to login-info */
